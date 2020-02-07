@@ -1,28 +1,33 @@
-function calculateTask1(){
-    let algebra = Number.parseInt(document.getElementById("algebra").value);
-    let geography = Number.parseInt(document.getElementById("geography").value);
-    let physics = Number.parseInt(document.getElementById("physics").value);
-    if(!algebra || !geography || !physics){
-        alert("Введите валидные значения");
-        return;
-    }
+//1 и 2 Задачи
 
-    let taskResult = averageMark(algebra, geography, physics);
-    document.getElementById("task1Result").innerText = `Средняя оценка равна: ${taskResult}`;
-}
+let algebra;
+let geography;
+let physics;
+let rating; //Средний балл по предметам
+let items; //Количество предметов
+let myName;
 
-function calculateTask2(){
-    let userName = document.getElementById("username").value;
-    if(!userName){
-        alert("Введите имя пользователя");
-        return;
-    }
-    
-    let taskResult = sayHello(userName);
-    document.getElementById("task2Result").innerText = taskResult;
-}
+algebra = 5;
+geography = 4;
+physics = 3;
+items = 3;
+myName = 'Мария Степановна';
 
-function calculateTask3(){
-    let taskResult = calculateFormula();
-    document.getElementById("task3Result").innerText = taskResult;
-}
+rating = (algebra + geography + physics) / items;
+
+console.log(`Привет, мир! Меня зовут ${myName}`);
+console.log(`Средний балл по ${items} предметам равен ${rating}`);
+console.log('______________');
+//3 Задача
+
+let x;
+let y;
+let z;
+let result;
+
+x = 2;
+y = 22;
+z = 0;
+
+result = x * y + 5 * z + x - 1;
+console.log(`Результат примера = ${result}`);
